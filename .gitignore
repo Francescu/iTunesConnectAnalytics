@@ -34,3 +34,5 @@ build/Release
 node_modules
 
 test.js
+.vscode/
+package-lock.json
