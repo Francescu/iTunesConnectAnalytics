@@ -1,5 +1,5 @@
 {
-  "name": "itunesconnectanalytics",
+  "name": "itunesconnectanalyticsapi",
   "description": "Apple iTunesConnect analytics API client.",
   "keywords": [
     "itunes",
@@ -13,8 +13,8 @@
   "contributors": [
     "Marko Cungl"
   ],
-  "version": "0.4.3",
-  "repository": "JanHalozan/iTunesConnectAnalytics",
+  "version": "0.5.0",
+  "repository": "Francescu/iTunesConnectAnalytics",
   "main": "src/analytics.js",
   "files": [
     "README.md",
