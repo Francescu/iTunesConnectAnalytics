@@ -14,7 +14,7 @@
     "Marko Cungl"
   ],
   "version": "0.5.0",
-  "repository": "Francescu/iTunesConnectAnalytics",
+  "repository": "Fr0ncescu/iTunesConnectAnalytics",
   "main": "src/analytics.js",
   "files": [
     "README.md",
