@@ -1,6 +1,7 @@
 # iTunesConnectAnalytics
 
-[![CircleCI](https://circleci.com/gh/JanHalozan/iTunesConnectAnalytics/tree/master.svg?style=shield)](https://circleci.com/gh/JanHalozan/iTunesConnectAnalytics/tree/master)
+[![CircleCI](https://circleci.com/gh/Francescu/iTunesConnectAnalytics/tree/master.svg?style=shield)](https://circleci.com/gh/Francescu/iTunesConnectAnalytics/tree/master)
+*forked from https://github.com/JanHalozan/iTunesConnectAnalytics for convenience*
 
 A nodejs module wrapping the iTunes Connect Analytics API. Allows retrieving data available under the `App Analytics` section of iTunes Connect.
 
@@ -8,7 +9,7 @@ _If you're building a dashboard for yourself or your company you might be better
 
 ## Installation
 
-`$ npm install itunesconnectanalytics`
+`$ npm install itunesconnectanalyticsapi`
 
 
 ## Example usage
