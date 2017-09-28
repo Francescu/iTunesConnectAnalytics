@@ -77,8 +77,12 @@ Itunes.prototype.handleLogin = function(error, response, body) {
       
       if (myAccount == null || myAccount.length == 0) {
         const loginError = self.getLoginError(response);
-        error = error || new Error('No account cookie :( Apple probably changed the login process');
+        error = error || new Error('No account cookie, Apple probably changed the login process');
+
         if (loginError && loginError.id) {
+          if (loginError.message) {
+            error = new Error(loginError.message)
+          }
           error.loginError = loginError
           if (loginError.id == LOGIN_ERROR_2FA) {
             self.options.twoFactor = {
@@ -358,10 +362,14 @@ Itunes.prototype.getLoginError = function(response) {
   if (!response.body.serviceErrors[0]) { return null; }
   if (!response.body.serviceErrors[0].code) { return null; }
   
-  const itcErrorCode = response.body.serviceErrors[0].code
+  const itcError = response.body.serviceErrors[0]
+  const itcErrorCode = itcError.code
   for (let errorId of Object.keys(loginErrors)) {
     const error = loginErrors[errorId];
     if (error.appleCode == itcErrorCode) {
+      if (itcError.message) {
+        error.message = itcError.message;
+      }
       return error;
     }
   }
